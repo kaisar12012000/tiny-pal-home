@@ -7,6 +7,9 @@ import {ReactComponent as HalfPhone} from "./assets/images/phone-half.svg";
 import { useNavigate } from 'react-router-dom';
 import Footer from './Components/Footer';
 import { useState } from 'react';
+import {ReactComponent as Couple} from "./assets/images/couple.svg";
+import {ReactComponent as ForParents1} from "./assets/images/for-parents-1.svg"
+import {ReactComponent as ForParents2} from "./assets/images/for-parents-2.svg"
 
 function NotifyMe (props) {
 
@@ -214,12 +217,12 @@ function App() {
             <div className="row">
                 <div className="col container hero-col">
                     <p className="h1 diff-font">
-                        <b>Daily new resources and experiences for 3-12 year olds</b>, fostering well-rounded excellence 
+                        <b><span className='text-gradient'>Daily new resources</span> <br /><span className='text-gradient'>and experiences for</span><br /> <span className='text-gradient'>3-12 year olds,</span><br /> fostering well-rounded excellence </b>
                     </p>
-                    <small>
+                    <p style={{fontSize: "1.2rem", fontWeight: 500}}>
                         Available soon on
-                    </small>
-                    <div style={{ width: "100%", marginBlock: "10px"}} className="row">
+                    </p>
+                    {/* <div style={{ width: "100%", marginBlock: "10px"}} className="row">
                         <div className="col">
                             <button className="download">
                                 <i className="bi-apple"></i>
@@ -238,10 +241,11 @@ function App() {
                                 </span>
                             </button>
                         </div>
-                    </div>
+                    </div> */}
+                    <button onClick={() => setShowNotifyMe(true)} className='black-btn' style={{ marginBlock: 20, width: "50%" }}>Get notified</button>
                 </div>
                 <div className="col container hero-col">
-                    <div className="container">
+                    <div className="container" id="#phone">
                         {/* <img src="./assets/images/phone.svg" alt="hero-phone" /> */}
                         <Phone />
                     </div>
@@ -249,43 +253,38 @@ function App() {
             </div>
         </div>
       </div>
-      <div className="mid container">
-        <center>
-            <p style={{fontWeight: 700, marginBlock: "20px"}} className="h2">
-                With Tiny Pal, parents of 3-12 year olds effortlessly discover local treasures and holistic experiences for their children
+      <div className="for-parents container">
+        <div className='row'>
+          <div className='col-3' id='couple'>
+            <Couple />
+          </div>
+          <div className='col-9'>
+            <span style={{ color: '#635BFF', fontSize: "1rem", fontWeight: 500 }}>For parents</span>
+            <p className='h2'>
+              <b>
+              With Tiny Pal, parents of 3-12 year olds <span  className='text-gradient'>effortlessly discover</span> local treasures and holistic experiences for their children
+              </b>
             </p>
-        </center>
-        <center>
-            <div className="row">
-                <div className="col">
-                    <button onClick={() => setShowSignUp(true)} className="btn-outlined">
-                        Find Experiences
-                    </button>
-                    <button onClick={() => navigate("/business")} className="btn-outlined">
-                        Host Experiences
-                    </button>
-                </div>
-            </div>
-        </center>
+            <p style={{ marginBlock: 10 }}>
+              <button onClick={() => setShowNotifyMe(true)} className="btn-outlined">
+                  Find Experiences
+              </button>
+              <button onClick={() => setShowSignUp(true)} className="btn-outlined">
+                  Host Experiences
+              </button>
+            </p>
+          </div>
+        </div>
     </div>
-    <div className="mid container">
-        <center>
-            <p style={{fontWeight: 700, marginBlock: "20px"}} className="h2">
-                With Tiny Pal, parents of 3-12 year olds effortlessly discover local treasures and holistic experiences for their children
-            </p>
-        </center>
-        <center>
-            <div className="row">
-                <div className="col">
-                    <button onClick={() => setShowSignUp(true)} className="btn-outlined">
-                        Find Experiences
-                    </button>
-                    <button  onClick={() => navigate("/business")} className="btn-outlined">
-                        Host Experiences
-                    </button>
-                </div>
-            </div>
-        </center>
+    <div className="container flowchart" style={{ marginBottom: 20, height : "50vh" }}>
+        <div className='row'>
+          <div className='col'>
+            <ForParents1 />
+          </div>
+          <div className='col'>
+            <ForParents2 />
+          </div>
+        </div>
     </div>
     <div className="conatiner help">
         <p className="h3 diff-font">
@@ -293,11 +292,7 @@ function App() {
         </p>
         <div className="row">
             <div className="col">
-                <div className="card">
-                    <span className="icon-container">
-                        {/* <img src="./assets/images/Icon.svg" alt="icon" /> */}
-                        <Icon />
-                    </span>
+                <div className="card" id="help-card-1">
                     <span className="card-head">
                         Ignite 10x growth horizons. 5x memorable moments for your child
                         <p>
@@ -307,11 +302,7 @@ function App() {
                 </div>
             </div>
             <div className="col">
-                <div className="card">
-                    <span className="icon-container">
-                        {/* <img src="./assets/images/Icon.svg" alt="icon" /> */}
-                        <Icon />
-                    </span>
+                <div className="card" id="help-card-2">
                     <span className="card-head">
                         Gain 10x toys and books. 5x new friends. Infinite experiences. At no cost!
                         <p>
@@ -323,11 +314,7 @@ function App() {
         </div>
         <div className="row">
             <div className="col">
-                <div className="card">
-                    <span className="icon-container">
-                        {/* <img src="./assets/images/Icon.svg" alt="icon" /> */}
-                        <Icon />
-                    </span>
+                <div className="card" id="help-card-3">
                     <span className="card-head">
                         Buy and sell pre-loved outdoor children equipment and educational electronics
                         <p>
@@ -337,11 +324,7 @@ function App() {
                 </div>
             </div>
             <div className="col">
-                <div className="card">
-                    <span className="icon-container">
-                        {/* <img src="./assets/images/Icon.svg" alt="icon" /> */}
-                        <Icon />
-                    </span>
+                <div className="card" id="help-card-4">
                     <span className="card-head">
                         Participate in 10x+ diverse events and activities
                         <p>
@@ -356,13 +339,15 @@ function App() {
         <div className="notify-card">
             <div className="row">
                 <div className="col top">
-                    <p>
+                    <p style={{ fontWeight: 500, fontSize: "1.2rem" }}>
                         Launching on
+                        <p className="h2">November, 21</p>
                     </p>
-                    <p className="h2">Novemver, 21</p>
-                    <button onClick={() => setShowNotifyMe(true)} className="black-btn">
+                    <p>
+                    <button onClick={() => setShowNotifyMe(true)} className="black-btn" style={{width: "8vw"}}>
                         Notify me
                     </button>
+                    </p>
                 </div>
                 <div className="col bottom">
                     <div className="img">
@@ -372,7 +357,7 @@ function App() {
             </div>
         </div>
     </div>
-    <Footer />
+    <Footer setShowSignUp={setShowSignUp} />
     </div>
   );
 }

@@ -13,12 +13,12 @@ export default function Businesses() {
         <div>
             <div className="mid businesses">
                 <center>
-                    <p className="h3 diff-font">
+                    <p className="h1 diff-font" style={{fontWeight: 700}}>
                         For businesses
                     </p>
                 </center>
                 <center>
-                    <p className="h3">
+                    <p className="h3" style={{fontWeight: 700}}>
                         Partner with TinyPal to 2-3x your revenue and increase your brand visibility
                     </p>
                 </center>
@@ -40,9 +40,9 @@ export default function Businesses() {
                                 <Icon />
                             </span>
                             <span style={{color: "#6F0DB5"}} className="card-head">
-                                Reach up to 80% more local parents seeking activities
+                                High Reach and Conversions with Relevant Audience
                                 <p>
-                                    Boost your visibility among local parents actively looking for children’s activities, ensuring your offerings stand out
+                                Hyperlocal, age-specific, and interest-based targeting ensures your ads reach engaged parents likely to convert, surpassing the broad reach of Facebook and Instagram.
                                 </p>
                             </span>
                         </div>
@@ -54,27 +54,30 @@ export default function Businesses() {
                                 <Icon />
                             </span>
                             <span style={{color: "#6F0DB5"}} className="card-head">
-                                Increase marketing effectiveness by 50% with flexible plans
+                                Direct Lead Delivery via WhatsApp
                                 <p>
-                                    Customize your marketing strategy with our platform’s versatile tools to effectively showcase and promote your services through targeted advertising and premium listings.
+                                Enjoy ease of use with direct lead delivery to your WhatsApp, enabling immediate and personal engagement with interested parents
                                 </p>
                             </span>
                         </div>
                     </div>
-                </div>
-                <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: "100%"}}>
-                    <div style={{width: "50% !important"}} className="card">
+                    <div className='col'>
+                    <div className="card">
                         <span style={{backgroundColor: "#EED7FF"}} className="icon-container">
                             {/* <img src="../assets/images/Icon.svg" alt="icon"> */}
                             <Icon />
                         </span>
                         <span style={{color: "#6F0DB5"}} className="card-head">
-                            Boost Lead Conversion Rates by 45% with AI- Agent Qualified Leads
+                            Detailed Performance Tracking
                             <p>
-                                Opportunity to project your unique selling points to facilitate personalized AI agent- enabled matching with parents, ensuring that leads are genuinely qualified
+                            Access comprehensive stats to monitor your ad's effectiveness and optimize your campaigns for better results.
                             </p>
                         </span>
                     </div>
+                    </div>
+                </div>
+                <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: "100%"}}>
+                    
                 </div>
             </div>
         </div> 
