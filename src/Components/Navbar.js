@@ -19,9 +19,9 @@ export default function Navbar(props) {
                   </ul>
                 <div className="d-flex">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item"><Link className="link nav-link" to="#">Products</Link></li>
+                        {/* <li className="nav-item"><Link className="link nav-link" to="#">Products</Link></li> */}
                         <li className="nav-item"><Link className='link nav-link' to="/about-us">About us</Link></li>
-                        <li className="nav-item"><button onClick={() => props.setShowNotifyMe(true)} className="btn btn-outline-success black-btn" type="submit">Notify me</button></li>
+                        <li className="nav-item"><button onClick={() => props.setShowNotifyMe(true)} className="btn btn-outline-success black-btn" type="submit">Partner with us</button></li>
                     </ul>
                 </div>
               </div>

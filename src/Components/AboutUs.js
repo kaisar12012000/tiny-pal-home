@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import {ReactComponent as PaintingGirl}  from "../assets/images/panting-girl.svg"
 import Footer from './Footer'
 
 export default function AboutUs() {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [])
     return (
         <>
         <Navbar />
