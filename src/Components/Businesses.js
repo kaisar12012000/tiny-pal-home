@@ -1,14 +1,26 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import {ReactComponent as Icon} from "../assets/images/Icon.svg"
+import {ReactComponent as Icon1} from "../assets/images/Icon-1.svg"
+import {ReactComponent as Icon2} from "../assets/images/Icon-2.svg"
+import {ReactComponent as Icon3} from "../assets/images/Icon-3.svg"
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { SignUp } from '../App'
 
 export default function Businesses() {
+    const [showSignUp, setShowSignUp] = useState(false)
+
     useEffect(() => {
         window.scrollTo(0,0)
     }, [])
+
     return (
         <>
+        {showSignUp && <div style={{
+        zIndex: 1, position: "fixed", top: 0, width: "100vw", height:"100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", background: "rgba(0,0,0,0.5)"
+        }}>
+          <SignUp setShowSignUp={setShowSignUp} />
+        </div>}
         <Navbar />
         <div>
             <div className="mid businesses">
@@ -26,6 +38,9 @@ export default function Businesses() {
                     <button className="grey-btn">
                         Know more
                     </button>
+                    <button onClick={() => setShowSignUp(true)} className="btn-outlined">
+                        Host Experiences
+                    </button>
                 </center>
             </div>
             <div style={{backgroundColor: "#DAB9F2"}} className="help">
@@ -34,10 +49,11 @@ export default function Businesses() {
                 </p>
                 <div className="row">
                     <div className="col">
-                        <div className="card">
+                        <div className="card business-card">
                             <span style={{backgroundColor: "#EED7FF"}} className="icon-container">
                                 {/* <img src="../assets/images/Icon.svg" alt="icon"> */}
-                                <Icon />
+                                {/* <Icon /> */}
+                                <Icon1 />
                             </span>
                             <span style={{color: "#6F0DB5"}} className="card-head">
                                 High Reach and Conversions with Relevant Audience
@@ -48,10 +64,10 @@ export default function Businesses() {
                         </div>
                     </div>
                     <div className="col">
-                        <div className="card">
+                        <div className="card business-card">
                             <span style={{backgroundColor: "#EED7FF"}} className="icon-container">
                                 {/* <img src="../assets/images/Icon.svg" alt="icon"> */}
-                                <Icon />
+                                <Icon2 />
                             </span>
                             <span style={{color: "#6F0DB5"}} className="card-head">
                                 Direct Lead Delivery via WhatsApp
@@ -62,10 +78,10 @@ export default function Businesses() {
                         </div>
                     </div>
                     <div className='col'>
-                    <div className="card">
+                    <div className="card business-card">
                         <span style={{backgroundColor: "#EED7FF"}} className="icon-container">
                             {/* <img src="../assets/images/Icon.svg" alt="icon"> */}
-                            <Icon />
+                            <Icon3 />
                         </span>
                         <span style={{color: "#6F0DB5"}} className="card-head">
                             Detailed Performance Tracking
@@ -81,7 +97,7 @@ export default function Businesses() {
                 </div>
             </div>
         </div> 
-        <Footer /> 
+        <Footer />
     </>
     )
 }
