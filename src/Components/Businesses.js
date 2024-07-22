@@ -23,7 +23,7 @@ export default function Businesses() {
         </div>}
         <Navbar />
         <div>
-            <div className="mid businesses">
+            <div className="container mid businesses">
                 <center>
                     <p className="h1 diff-font" style={{fontWeight: 700}}>
                         For businesses
@@ -35,8 +35,8 @@ export default function Businesses() {
                     </p>
                 </center>
                 <center>
-                    <button className="grey-btn">
-                        Know more
+                    <button onClick={() => setShowSignUp(true)} className="btn-outlined">
+                        Advertise with us
                     </button>
                     <button onClick={() => setShowSignUp(true)} className="btn-outlined">
                         Host Experiences
@@ -44,6 +44,7 @@ export default function Businesses() {
                 </center>
             </div>
             <div style={{backgroundColor: "#DAB9F2"}} className="help">
+                <div className='container'>
                 <p className="h3 diff-font">
                     What can TinyPal help you with?
                 </p>
@@ -95,6 +96,7 @@ export default function Businesses() {
                 <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: "100%"}}>
                     
                 </div>
+            </div>
             </div>
         </div> 
         <Footer />

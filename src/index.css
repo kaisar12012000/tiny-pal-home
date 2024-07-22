@@ -3,6 +3,11 @@
 body {
     font-family: "Quicksand", sans-serif;
 }
+
+.container {
+    max-width: 1080px !important;
+}
+
 .header {
     height: 100vh;
     width: 100%;
@@ -12,8 +17,12 @@ body {
     background-size: cover;
 }
 nav {
-    padding-inline: 10vw !important;
+    /* padding-inline: 10vw !important; */
     background-color: #fff !important;
+}
+
+nav .container-fluid {
+    max-width: 1080px !important;
 }
 
 .nav-item {
@@ -77,8 +86,15 @@ nav {
 }
 
 .hero-col:nth-child(1) {
-    padding: 5vw 10vw;
+    padding: 12px;
     margin-bottom: 10px;
+}
+
+.hero-col:nth-child(2) .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mid {
@@ -97,13 +113,18 @@ nav {
     color: #050D2D;
     font-weight: 700;
     margin-right: 40px;
+    border: 1px solid #838AA3
 }
 
-.btn-outlined:hover {
+/* .btn-outlined:hover {
     transition-property: all;
     transition-duration: 0.25s;
     border: none;
     background-color: #F6F4F6;
+} */
+
+.flowchart .row .col {
+    width: 50%;
 }
 
 .help {
@@ -113,6 +134,7 @@ nav {
 
 .help .row {
     margin-block: 50px;
+    height: fit-content;
 }
 
 #help-card-1 {
@@ -171,7 +193,7 @@ nav {
 }
 
 .business-card {
-    height: 50vh !important;
+    height: 60vh !important;
 }
 
 .icon-container {
@@ -183,7 +205,7 @@ nav {
 }
 
 .notify {
-    padding: 128px 180px 128px 180px;
+    padding-block: 128px;
 }
 
 .notify-card {
@@ -336,6 +358,7 @@ nav {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block; /* Ensure it works on inline elements */
 }
 .bi-linkedin:hover {
   color: #0866FF
@@ -351,6 +374,23 @@ nav {
   border-radius: 10px;
   width: 100%;
   margin-block: 10px;
+  -webkit-appearance: none; /* Removes the default arrow in WebKit browsers */
+  -moz-appearance: none; /* Removes the default arrow in Firefox */
+  appearance: none;
+  border: 2px solid #D5D9E7
+}
+
+select::-ms-expand {
+    display: none; /* Remove default arrow in IE */
+  }
+  
+select::after {
+  content: '▼';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .modal-card button {
@@ -388,6 +428,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 12px !important
 }
 
 .navbar-toggler {
@@ -408,7 +449,7 @@ nav {
     }
 
     .card {
-        height: 50vh; 
+        height: fit-content; 
     }
     .notify {
         padding: 100px 25px;
@@ -429,6 +470,9 @@ nav {
     .about-us-card .left {
         padding-bottom: 40px;
     }
+    .navbar-collapse {
+        border-bottom: 1px solid #838AA3;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -446,11 +490,12 @@ nav {
         width: 100% !important;
     }
 
-    .header .container .row .col .container {
+    .header .container .row .col  {
         display: flex !important;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        padding: 30px;
     }
 
     .for-parents {
@@ -475,6 +520,9 @@ nav {
     .flowchart .row {
         display: block;
         text-align: center;
+    }
+    .flowchart .row .col {
+        width: 100%;
     }
     .help p {
         margin-bottom: 10vh;
@@ -508,6 +556,10 @@ nav {
     .bottom .img svg{
         width: 40vw;
     }
+
+    .businesses {
+        padding: 30px !important;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -530,6 +582,7 @@ nav {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        display: inline-block; /* Ensure it works on inline elements */
       }
       .bi-linkedin {
         color: #0866FF

@@ -11,7 +11,7 @@ import {ReactComponent as Couple} from "./assets/images/couple.svg";
 import {ReactComponent as ForParents1} from "./assets/images/for-parents-1.svg"
 import {ReactComponent as ForParents2} from "./assets/images/for-parents-2.svg"
 
-function NotifyMe (props) {
+export function NotifyMe (props) {
 
   const cities = [
     "Mumbai",
@@ -259,7 +259,6 @@ function App() {
             <Couple />
           </div>
           <div className='col-9'>
-            <span style={{ color: '#635BFF', fontSize: "1rem", fontWeight: 500 }}>For parents</span>
             <p className='h2' style={{ marginBlock: 30 }}>
               <b>
               With Tiny Pal, parents of 3-12 year olds <span  className='text-gradient'>effortlessly discover</span> local treasures and holistic experiences for their children
@@ -286,7 +285,8 @@ function App() {
           </div>
         </div>
     </div>
-    <div className="conatiner help">
+    <div className="help">
+      <div className='container'>
         <p className="h3 diff-font">
             What can Tiny Pal help you with?
         </p>
@@ -334,6 +334,7 @@ function App() {
                 </div>
             </div>
         </div>
+      </div>
     </div>
     <div className="notify container">
         <div className="notify-card">

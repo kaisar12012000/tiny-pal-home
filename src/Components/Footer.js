@@ -143,7 +143,7 @@ export default function Footer(props) {
                         <li className='nav-item'>
                             <Link className='nav-link' to="/business">Advertisers</Link>
                         </li>
-                        <li className='nav-item'><Link className='nav-link' onClick={() => setShowSignUp(true)}>Host</Link></li>
+                        <li className='nav-item'><Link className='nav-link' onClick={() => setShowSignUp(true)}>Hosts</Link></li>
                         {/* <li className='nav-item'><Link className='nav-link' to="/careers">Careers</Link></li> */}
                     </ul>
                 </div>
