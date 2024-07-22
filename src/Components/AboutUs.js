@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
-import {ReactComponent as PaintingGirl}  from "../assets/images/panting-girl.svg"
+// import {ReactComponent as PaintingGirl}  from "../assets/images/panting-girl.svg"
+import {ReactComponent as AboutUsImg}  from "../assets/images/About-us-img.svg"
 import Footer from './Footer'
 
 export default function AboutUs() {
+    // const [showSignUp, setShowSignUp] = useState(false)
     useEffect(() => {
         window.scrollTo(0,0)
     }, [])
@@ -17,11 +19,12 @@ export default function AboutUs() {
                         <p className='h3 diff-font'>
                             About Us
                         </p>
-                        <p>AI-led child development discovery based on information provided by the parent about the key priorities and challenges concerning the child (part of child's profile), and intelligence gathered bases reading preferences of the parent, </p>
+                        <p>An experiential marketplace for AI-led child development discovery. We started in 2024 with a vision to become an all-in-one platform for convenient and fulfilling parenting. Our mission is to provide holistic experiences for children with utmost convenience for a parent via suggestions on the feed bases past behavior, child interests and parental priorities.</p>
                     </div>
                     <div className="col right">
                         <div className="img">
-                            <PaintingGirl />
+                            {/* <PaintingGirl /> */}
+                            <AboutUsImg />
                         </div>
                     </div>
                 </div>

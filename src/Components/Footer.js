@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {ReactComponent as LogoSVG} from "../assets/images/logo.svg";
 import { Link } from 'react-router-dom';
+import { SignUp } from '../App'
 
 function ContactUs (props) {
     const cities = [
@@ -94,6 +95,7 @@ function ContactUs (props) {
 export default function Footer(props) {
 
     const [showContactUs, setShowContactUs] = useState(false)
+    const [showSignUp, setShowSignUp] = useState(false)
 
     return (
         <>
@@ -102,6 +104,11 @@ export default function Footer(props) {
             }}>
               <ContactUs setShowContactUs={setShowContactUs} />
             </div>}
+        {showSignUp && <div style={{
+          zIndex: 1, position: "fixed", top: 0, width: "100vw", height:"100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", background: "rgba(0,0,0,0.5)"
+        }}>
+          <SignUp setShowSignUp={setShowSignUp} />
+        </div>}
         <div className='footer'>
             <div className='row'>
             <div className='col'></div>
@@ -114,7 +121,7 @@ export default function Footer(props) {
                     </li>
                     <li className="navbar-brand nav-item">
                     <p style={{ marginBlock: 10 }}>
-                    AI-led child development discovery based
+                    An experiential learning marketplace. 
                     </p>
                     </li>
                     </ul>
@@ -135,27 +142,28 @@ export default function Footer(props) {
                         <li className='nav-item'><b>Work with us</b></li>
                         <li className='nav-item'>
                             <Link className='nav-link' to="/business">Advertisers</Link>
-                            <Link className='nav-link' onClick={() => props?.setShowSignUp(true)}>Host</Link>
-                            <Link className='nav-link' to="/careers">Careers</Link>
                         </li>
+                        <li className='nav-item'><Link className='nav-link' onClick={() => setShowSignUp(true)}>Host</Link></li>
+                        {/* <li className='nav-item'><Link className='nav-link' to="/careers">Careers</Link></li> */}
                     </ul>
                 </div>
                 <div className='col'>
                     <ul>
-                    <div className='social nav-item'>
+                    <li className='social nav-item'>
                         <a className='social-link' href='https://www.facebook.com/profile.php?id=61561060388969' target='_blank'>
                             <i class="bi bi-facebook"></i>
                         </a>
                         {/* <a className='social-link' href='#'>
                             <i class="bi bi-twitter-x"></i>
                         </a> */}
-                        <a className='social-link' href='#'>
+                        <a className='social-link' href='https://www.instagram.com/tinypalinc?igsh=MWd1ZzAxZHdxejA2bw=='>
                             <i class="bi bi-instagram"></i>
                         </a>
                         <a className='social-link' href='https://www.linkedin.com/company/tinypal/' target='_blank'>
                             <i class="bi bi-linkedin"></i>
                         </a>
-                    </div>
+                    </li>
+                    <li className='nav-item'></li>
                     <li className='nav-item'>
                     <p>&copy; 2024 TinyPal.</p>
                     </li>
@@ -168,7 +176,7 @@ export default function Footer(props) {
                 </div>
                 <div className='col'></div>
             </div>
-        </div>
+        </div> 
         </>
     )
 }

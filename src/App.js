@@ -102,7 +102,7 @@ function NotifyMe (props) {
   )
 }
 
-function SignUp (props) {
+export function SignUp (props) {
 
   const cities = [
     "Mumbai",
@@ -220,7 +220,7 @@ function App() {
                         <b><span className='text-gradient'>Daily new resources</span> <br /><span className='text-gradient'>and experiences for</span><br /> <span className='text-gradient'>3-12 year olds,</span><br /> fostering well-rounded excellence </b>
                     </p>
                     <p style={{fontSize: "1.2rem", fontWeight: 500}}>
-                        Available soon on
+                        Available soon.
                     </p>
                     {/* <div style={{ width: "100%", marginBlock: "10px"}} className="row">
                         <div className="col">
@@ -260,7 +260,7 @@ function App() {
           </div>
           <div className='col-9'>
             <span style={{ color: '#635BFF', fontSize: "1rem", fontWeight: 500 }}>For parents</span>
-            <p className='h2'>
+            <p className='h2' style={{ marginBlock: 30 }}>
               <b>
               With Tiny Pal, parents of 3-12 year olds <span  className='text-gradient'>effortlessly discover</span> local treasures and holistic experiences for their children
               </b>
@@ -294,9 +294,9 @@ function App() {
             <div className="col">
                 <div className="card" id="help-card-1">
                     <span className="card-head">
-                        Ignite 10x growth horizons. 5x memorable moments for your child
+                        Ignite 10x growth horizons. 5x memorable moments.
                         <p>
-                            Daily personalized under-1-minute reads to instill over 100 essential skills in your child, with actionable tips and engaging activities for memorable learning moments.
+                          Daily <em style={{ color: "#08164C", fontStyle: "normal" }}>personalized under-1-minute reads</em> to instill over 100 essential skills in your child, with actionable tips and engaging activities for memorable learning moments.
                         </p>
                     </span>
                 </div>
@@ -306,7 +306,7 @@ function App() {
                     <span className="card-head">
                         Gain 10x toys and books. 5x new friends. Infinite experiences. At no cost!
                         <p>
-                            Daily personalized under-1-minute reads to instill over 100 essential skills in your child, with actionable tips and engaging activities for memorable learning moments.
+                        Endless <em style={{ color: "#08164c", fontStyle: "normal"}}>neighborhood swaps of toys and books</em> foster new friendships and enrich your child’s experiences, igniting social intelligence, emotional growth through challenging swaps, and sharpening decision-making skills with each choice.
                         </p>
                     </span>
                 </div>
@@ -318,7 +318,7 @@ function App() {
                     <span className="card-head">
                         Buy and sell pre-loved outdoor children equipment and educational electronics
                         <p>
-                            Daily personalized under-1-minute reads to instill over 100 essential skills in your child, with actionable tips and engaging activities for memorable learning moments.
+                        Discover <em style={{ color: "#08164c", fontStyle: "normal"}}>pre-loved, high-end gear from neighborhood treasures</em> for kids rapidly outgrow their equipment.
                         </p>
                     </span>
                 </div>
@@ -326,9 +326,9 @@ function App() {
             <div className="col">
                 <div className="card" id="help-card-4">
                     <span className="card-head">
-                        Participate in 10x+ diverse events and activities
+                        Participate in 10x+ outdoor and indoor activities.
                         <p>
-                            Daily personalized under-1-minute reads to instill over 100 essential skills in your child, with actionable tips and engaging activities for memorable learning moments.
+                        <em style={{ color: "#08164c", fontStyle: "normal"}}>Creative engagements</em> – imagine musical chairs, relay races, cognitive boot camps, cake baking sessions etc. – <em style={{ color: "#08164c", fontStyle: "normal"}}>in a small group led by passionate hosts!</em>
                         </p>
                     </span>
                 </div>
@@ -357,7 +357,7 @@ function App() {
             </div>
         </div>
     </div>
-    <Footer setShowSignUp={setShowSignUp} />
+    <Footer />
     </div>
   );
 }
