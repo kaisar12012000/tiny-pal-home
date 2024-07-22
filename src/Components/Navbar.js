@@ -1,10 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { ReactComponent as LogoSVG }  from "../assets/images/logo.svg";
 import { Link, useNavigate } from 'react-router-dom';
+import { NotifyMe } from '../App';
 
 export default function Navbar(props) {
     const navigate = useNavigate()
+  const [showNotifyMe, setShowNotifyMe] = useState(false)
+
     return (
+        <>
+        {showNotifyMe && <div style={{
+        zIndex: 1, position: "fixed", top: 0, width: "100vw", height:"100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", background: "rgba(0,0,0,0.5)"
+      }}>
+        <NotifyMe setShowNotifyMe={setShowNotifyMe} />
+      </div>}
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
               <Link className="navbar-brand" to="/">
@@ -21,11 +30,12 @@ export default function Navbar(props) {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         {/* <li className="nav-item"><Link className="link nav-link" to="#">Products</Link></li> */}
                         <li className="nav-item"><Link className='link nav-link' to="/about-us">About us</Link></li>
-                        <li className="nav-item"><button onClick={() => props.setShowNotifyMe(true)} className="btn btn-outline-success black-btn" type="submit">Partner with us</button></li>
+                        <li className="nav-item"><Link onClick={() => setShowNotifyMe(true)} className="link nav-link" type="submit">Partner with us</Link></li>
                     </ul>
                 </div>
               </div>
             </div>
         </nav>
+        </>
     )
 }
