@@ -461,6 +461,9 @@ select::after {
 }
 
 @media screen and (max-width: 1000px) {
+    .about-us {
+        padding-block: 20px !important;
+    }
     .about-us-card .row {
         display: flex;
         flex-direction: column-reverse !important;
@@ -595,7 +598,7 @@ select::after {
         padding: 100px 20px
     }
     .bottom .img svg{
-        width: 80vw;
+        width: 65vw;
     }
     .modal-card .row {
         display: block;

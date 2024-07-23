@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { ReactComponent as LogoSVG }  from "../assets/images/logo.svg";
 import { Link, useNavigate } from 'react-router-dom';
-import { NotifyMe } from '../App';
+import { SignUp } from '../App';
 
 export default function Navbar(props) {
     const navigate = useNavigate()
@@ -12,7 +12,7 @@ export default function Navbar(props) {
         {showNotifyMe && <div style={{
         zIndex: 1, position: "fixed", top: 0, width: "100vw", height:"100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", background: "rgba(0,0,0,0.5)"
       }}>
-        <NotifyMe setShowNotifyMe={setShowNotifyMe} />
+        <SignUp setShowSignUp={setShowNotifyMe} />
       </div>}
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">

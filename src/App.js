@@ -304,7 +304,7 @@ function App() {
             <div className="col">
                 <div className="card" id="help-card-2">
                     <span className="card-head">
-                        Gain 10x toys and books. 5x new friends. Infinite experiences. At no cost!
+                        Gain 10x educational toys and books. 5x new friends. Infinite experiences. At no cost!
                         <p>
                         Endless <em style={{ color: "#08164c", fontStyle: "normal"}}>neighborhood swaps of toys and books</em> foster new friendships and enrich your child’s experiences, igniting social intelligence, emotional growth through challenging swaps, and sharpening decision-making skills with each choice.
                         </p>
@@ -326,7 +326,7 @@ function App() {
             <div className="col">
                 <div className="card" id="help-card-4">
                     <span className="card-head">
-                        Participate in 10x+ outdoor and indoor activities.
+                        Participate in 10x+ outdoor and indoor activities
                         <p>
                         <em style={{ color: "#08164c", fontStyle: "normal"}}>Creative engagements</em> – imagine musical chairs, relay races, cognitive boot camps, cake baking sessions etc. – <em style={{ color: "#08164c", fontStyle: "normal"}}>in a small group led by passionate hosts!</em>
                         </p>
