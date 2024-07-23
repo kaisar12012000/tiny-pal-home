@@ -38,9 +38,9 @@ export default function Businesses() {
                     <button onClick={() => setShowSignUp(true)} className="btn-outlined">
                         Advertise with us
                     </button>
-                    <button onClick={() => setShowSignUp(true)} className="btn-outlined">
+                    {/* <button onClick={() => setShowSignUp(true)} className="btn-outlined">
                         Host Experiences
-                    </button>
+                    </button> */}
                 </center>
             </div>
             <div style={{backgroundColor: "#DAB9F2"}} className="help">

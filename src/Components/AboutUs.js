@@ -12,14 +12,14 @@ export default function AboutUs() {
     return (
         <>
         <Navbar />
-        <div className="notify container">
+        <div className="notify container about-us">
             <div className="notify-card about-us-card">
                 <div className="row">
                     <div className="col left">
                         <p className='h3 diff-font'>
                             About Us
                         </p>
-                        <p>An experiential marketplace for AI-led child development discovery. We started in 2024 with a vision to become an all-in-one platform for convenient and fulfilling parenting. Our mission is to provide holistic experiences for children with utmost convenience for a parent via suggestions on the feed bases past behavior, child interests and parental priorities.</p>
+                        <p>An experiential learning marketplace with AI-led child development discovery. We started in 2024 with a vision to become an all-in-one platform for convenient and fulfilling parenting. Our mission is to provide holistic experiences for children with utmost convenience for a parent via suggestions on the feed bases past behavior, child interests and parental priorities.</p>
                     </div>
                     <div className="col right">
                         <div className="img">
