@@ -14,7 +14,7 @@ export default function Navbar(props) {
       }}>
         <SignUp setShowSignUp={setShowNotifyMe} />
       </div>}
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container-fluid">
               <Link className="navbar-brand" to="/">
                 {/* <img src={LogoSVG} alt="logo" /> */}
