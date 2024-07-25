@@ -9,12 +9,13 @@ body {
 }
 
 .header {
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     background-image: url(./assets/images/Header-Background.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 5vh;
 }
 nav {
     /* padding-inline: 10vw !important; */
@@ -123,6 +124,10 @@ nav .container-fluid {
     background-color: #F6F4F6;
 } */
 
+.flowchart .row {
+    padding-block: 30px;
+}
+
 .flowchart .row .col {
     width: 50%;
 }
@@ -130,6 +135,9 @@ nav .container-fluid {
 .help {
     padding: 128px 180px 128px 180px;
     background-color: #B7E1FA;
+    background-image: url(./assets/images/hand-blue.png);
+    background-position: 10% 95%;
+    background-repeat: no-repeat;
 }
 
 .help .row {
@@ -142,6 +150,7 @@ nav .container-fluid {
     background-size: 25%;
     background-position: right bottom;
     background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 #help-card-2 {
@@ -149,6 +158,7 @@ nav .container-fluid {
     background-size: 25%;
     background-position: right bottom;
     background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 #help-card-3 {
@@ -156,6 +166,7 @@ nav .container-fluid {
     background-size: 25%;
     background-position: right bottom;
     background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 #help-card-4 {
@@ -163,6 +174,7 @@ nav .container-fluid {
     background-size: 25%;
     background-position: right bottom;
     background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 .card {
@@ -345,23 +357,8 @@ nav .container-fluid {
   color: #838AA3;
 }
 
-.bi-facebook:hover {
-  color: #0866FF
-}
-
-.bi-twitter-x:hover {
-  color: #333
-}
-
-.bi-instagram:hover {
-    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block; /* Ensure it works on inline elements */
-}
-.bi-linkedin:hover {
-  color: #0866FF
+.social a:hover {
+  color: #565b6a
 }
 
 .modal-card {
@@ -393,7 +390,7 @@ select::after {
   pointer-events: none;
 }
 
-.modal-card button {
+.modal-card button, .submit-btn {
   border: none;
   border-radius: 10px;
   padding: 10px 20px;
@@ -438,21 +435,79 @@ select::after {
 .navbar-toggler-icon{
     background-image: url(./assets/images/hamburger.png) !important;
 }
- 
+
+/* .half-img {
+    width: 25vw !important;
+} */
+
+/* .carousel-item img {
+    width: auto !important;
+} */
+
+.post-header {
+    padding-block: 50px;
+}
+
+.card-head {
+    padding-right: 30px;
+}
+
+.carousel-indicators {
+    margin-bottom: -50px !important;
+}
+
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background-color: #aaa !important;
+    /* margin-top: 50vh; */
+}
+
+.carousel-nav {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel-nav button {
+    border: 0;
+    background: transparent;
+    height: 15px;
+}
 
 @media screen and (max-width: 1200px) {
+    nav {
+        padding-inline: 20px !important;
+    }
     .header {
         height: fit-content;
     }
+
+    .flowchart {
+        margin-top: 10vh
+    }
+
     .flowchart svg {
         width: 100%;
     }
 
     .card {
         height: fit-content; 
+        margin-block: 20px;
+    }
+    .card-head {
+        padding-right: 20%;
     }
     .notify {
-        padding: 100px 25px;
+        padding: 25px;
+    }
+
+    .footer {
+        padding: 10px 0 50px;
     }
 
     .notify button {
@@ -479,12 +534,16 @@ select::after {
 }
 
 @media screen and (max-width: 770px) {
+    .header .container .row .col .carousel-indicators button {
+        width: 15px !important;
+        height: 15px !important;
+    }
     .header .container {
         height: fit-content;
     }
     .header .container .row {
         display: flex !important;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -499,6 +558,12 @@ select::after {
         justify-content: center;
         align-items: flex-start;
         padding: 30px;
+    }
+    .hero-col:nth-child(1) {
+        padding-bottom: 0 !important;
+    }
+    .col-9 {
+        width: 100%;
     }
 
     .for-parents {
@@ -572,30 +637,24 @@ select::after {
         justify-content: center !important;
         align-items: center;
     }
-    .bi-facebook {
-        color: #0866FF
-      }
-      
-      .bi-twitter-x {
-        color: #333
-      }
-      
-      .bi-instagram {
-        background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block; /* Ensure it works on inline elements */
-      }
-      .bi-linkedin {
-        color: #0866FF
-      }
       
 }
 
 @media screen and (max-width: 650px) {
     .help {
         padding: 100px 20px
+    }
+    .help .container {
+        padding-bottom: 100px;
+    }
+    .business-help {
+        background-position: 90% 20px !important ;
+    }
+    .business-card {
+        height: fit-content !important;
+    }
+    .card p {
+        font-size: 1rem !important;
     }
     .bottom .img svg{
         width: 65vw;

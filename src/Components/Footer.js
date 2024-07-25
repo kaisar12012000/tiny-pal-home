@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import {ReactComponent as LogoSVG} from "../assets/images/logo.svg";
 import { Link } from 'react-router-dom';
 import { SignUp } from '../App'
+import emailjs from 'emailjs-com';
 
 function ContactUs (props) {
+  const [sent, setSent] = useState(false)
+  const [err, setErr] = useState()
+
     const cities = [
         "Mumbai",
         "Delhi",
@@ -52,6 +56,20 @@ function ContactUs (props) {
         "Raipur",
         "Kota",
       ]
+
+  const formRef = useRef()
+
+      const submitHandler = (e) => {
+        e.preventDefault();
+        console.log(formRef.current)
+         emailjs.sendForm("service_ik0cxgj", "template_5k3txpz", formRef.current, "u0Pzu3nGFYuptPdWW").then(() => {
+          setSent(true)
+          console.log("SUCCESS!")
+         }, error => {
+          console.log("Failed!", error)
+          setErr(err)
+         })
+      }
     return (
         <div className='card modal-card' style={{ display: "block", height: "fit-content", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
           <div style={{
@@ -59,9 +77,26 @@ function ContactUs (props) {
           }}>
             <i style={{cursor: "pointer"}} onClick={() => props.setShowContactUs(false)} class="bi bi-x-lg"></i>
           </div>
-          <p className='h1 diff-font'>
+          {sent ? <>
+        <center>
+          <div className='success'>
+            <p className='h3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3 p-3'>
+              Thank you for reaching out to us. Our team will get in touch with you shortly.
+            </p>
+          </div>
+        </center>
+        </> : err ? <>
+        <center>
+          <div className='success'>
+            <p className='h3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3 p-3'>
+              Something went wrong. Please reach out to us at preeti.harshavardhan@gmail.com
+            </p>
+          </div>
+        </center>
+        </> : <><p className='h1 diff-font'>
           Contact us.
           </p>
+          <form ref={formRef} onSubmit={submitHandler}>
           <div className='row'>
             <div className='col'>
               <label>Name</label>
@@ -86,8 +121,10 @@ function ContactUs (props) {
           ** We will not send you any promotions :)
           </small> */}
           <center>
-            <button>Submit</button>
+            <input type='submit' value="Submit" className='submit-btn' />
           </center>
+          </form>
+          </>}
         </div>
     )
 }

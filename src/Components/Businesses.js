@@ -3,6 +3,7 @@ import {ReactComponent as Icon} from "../assets/images/Icon.svg"
 import {ReactComponent as Icon1} from "../assets/images/Icon-1.svg"
 import {ReactComponent as Icon2} from "../assets/images/Icon-2.svg"
 import {ReactComponent as Icon3} from "../assets/images/Icon-3.svg"
+import BG from "../assets/images/hand-purple.png"
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { SignUp } from '../App'
@@ -43,7 +44,7 @@ export default function Businesses() {
                     </button> */}
                 </center>
             </div>
-            <div style={{backgroundColor: "#DAB9F2"}} className="help">
+            <div style={{backgroundColor: "#DAB9F2", backgroundImage: `url(${BG})`, backgroundRepeat: "no-repeat", backgroundPosition: "90% 10%"}} className="help business-help">
                 <div className='container'>
                 <p className="h3 diff-font">
                     What can TinyPal help you with?
@@ -51,7 +52,7 @@ export default function Businesses() {
                 <div className="row">
                     <div className="col">
                         <div className="card business-card">
-                            <span style={{backgroundColor: "#EED7FF"}} className="icon-container">
+                            <span className="icon-container">
                                 {/* <img src="../assets/images/Icon.svg" alt="icon"> */}
                                 {/* <Icon /> */}
                                 <Icon1 />
@@ -66,7 +67,7 @@ export default function Businesses() {
                     </div>
                     <div className="col">
                         <div className="card business-card">
-                            <span style={{backgroundColor: "#EED7FF"}} className="icon-container">
+                            <span className="icon-container">
                                 {/* <img src="../assets/images/Icon.svg" alt="icon"> */}
                                 <Icon2 />
                             </span>
@@ -80,7 +81,7 @@ export default function Businesses() {
                     </div>
                     <div className='col'>
                     <div className="card business-card">
-                        <span style={{backgroundColor: "#EED7FF"}} className="icon-container">
+                        <span className="icon-container">
                             {/* <img src="../assets/images/Icon.svg" alt="icon"> */}
                             <Icon3 />
                         </span>
